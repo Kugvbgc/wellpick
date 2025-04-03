@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.HomeFragment"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/accelerate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/text"
+                android:text="Category"
+                android:textColor="#FAAA91"
+                android:textSize="20sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/Category_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/accelerate"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:scrollbars="none" />
+
+            <TextView
+                android:id="@+id/accelerate1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Category_recyclerView"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/text"
+                android:text="Top Popular"
+                android:textColor="#FAAA91"
+                android:textSize="20sp" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/Popular_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/accelerate1"
+                />
+
+            <TextView
+                android:id="@+id/accelerate2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Popular_recyclerView"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/text"
+                android:text="All Images"
+                android:textColor="#FAAA91"
+                android:textSize="20sp" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/AllImages"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/accelerate2"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:scrollbars="none"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

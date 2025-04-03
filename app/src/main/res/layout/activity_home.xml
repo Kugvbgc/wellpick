@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6E3DD"
+    tools:context=".activity.HomeActivity">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:background="#fff"
+       >
+       <androidx.drawerlayout.widget.DrawerLayout
+           android:id="@+id/drawerlayout"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           tools:openDrawer="start"
+           >
+           <androidx.coordinatorlayout.widget.CoordinatorLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               >
+               <com.google.android.material.appbar.AppBarLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   >
+
+                   <com.google.android.material.appbar.MaterialToolbar
+                       android:id="@+id/Toolbar"
+                       android:layout_width="match_parent"
+                       android:layout_height="?attr/actionBarSize"
+                       android:background="#F6E3DD"
+                       app:title="Wellcome Wellpick"
+                       app:titleTextColor="#FAAA91"
+                       app:menu="@menu/toolbar"
+                       app:navigationIcon="@drawable/baseline_menu_24"
+                       app:navigationIconTint="#FAAA91"
+                       />
+
+               </com.google.android.material.appbar.AppBarLayout>
+
+
+               <FrameLayout
+                   android:id="@+id/FrameLayout"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_marginTop="?attr/actionBarSize"
+                   />
+
+           </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+           <com.google.android.material.navigation.NavigationView
+               android:id="@+id/NavigationView"
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:layout_gravity="start"
+               app:headerLayout="@layout/nav_header"
+               app:menu="@menu/nav_items"
+
+               />
+
+
+
+
+
+       </androidx.drawerlayout.widget.DrawerLayout>
+
+       <com.google.android.material.bottomnavigation.BottomNavigationView
+           android:id="@+id/bottomnavigation"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_alignParentBottom="true"
+           app:menu="@menu/buttom"
+           app:itemIconTint="#FAAA91"
+            android:pointerIcon="zoom_in"
+           android:background="#F6E3DD"
+           android:layout_above="@id/drawerlayout"
+           />
+
+
+   </RelativeLayout>
+
+
+</RelativeLayout>

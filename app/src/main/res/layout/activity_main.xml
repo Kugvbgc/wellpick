@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F6E3DD"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        >
+        <androidx.cardview.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:elevation="12dp"
+            android:id="@+id/view2"
+            app:cardCornerRadius="50dp"
+            android:layout_centerHorizontal="true"
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thicknessRatio="2.9"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:layout_height="100dp"
+                android:layout_width="100dp"
+                android:id="@+id/imageView1"
+                android:src="@drawable/selhes"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"/>
+
+
+
+
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="For"
+            android:textColor="#EFEFD7AA"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:fontFamily="@font/text"
+            android:layout_marginTop="130dp"
+            android:layout_below="@id/view2"
+            android:layout_centerInParent="true"
+            />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ak_software_ltd"
+            android:textColor="#EFEFD7AA"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:fontFamily="@font/text"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/textView2"
+            android:layout_centerInParent="true"
+            />
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
